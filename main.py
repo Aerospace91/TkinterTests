@@ -18,8 +18,17 @@ def main():
     #grid() function is a Geometry manager, no params = 0,0
     lbl.grid()
     
+    def clicked():
+        lbl.configure(text = "I just got clicked")
+    
+    btn = tk.Button(root, text = "Click me", fg = "red", command=clicked)
+    
+    btn.grid(column=1, row=0)
+    
     #execute Tkinter
     root.mainloop()
+
+
 
 
 if __name__ == "__main__":
